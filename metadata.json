@@ -1,0 +1,6 @@
+{
+  "name": "Leo Músicas",
+  "description": "Um reprodutor de música 100% offline, moderno e com um toque de sarcasmo inteligente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

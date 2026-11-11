@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixar Leo Músicas (APK)</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #121212 0%, #1e1b2e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+        .card {
+            background: rgba(30, 30, 45, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(138, 92, 246, 0.3);
+            border-radius: 28px;
+            padding: 36px 28px;
+            max-width: 440px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        .icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #a78bfa, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            font-size: 14px;
+            color: #9ca3af;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 16px 28px;
+            border-radius: 16px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+            margin-bottom: 24px;
+        }
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.6);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(167, 139, 250, 0.15);
+            color: #c4b5fd;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .steps {
+            background: rgba(15, 15, 25, 0.6);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .steps h3 {
+            font-size: 13px;
+            color: #a78bfa;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .step-item {
+            display: flex;
+            gap: 10px;
+            font-size: 13px;
+            color: #d1d5db;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .step-item:last-child { margin-bottom: 0; }
+        .step-num {
+            background: #7c3aed;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .sarcasm {
+            font-size: 12px;
+            color: #6b7280;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon">🎵</div>
+        <h1>Leo Músicas</h1>
+        <div class="badge">Versão 1.0 • APK Completo (~23 MB)</div>
+        <p class="subtitle">O seu reprodutor offline completo, rápido e com sarcasmo inteligente.</p>
+
+        <a href="/LeoMusicas.apk" download="LeoMusicas.apk" class="btn-download" id="downloadBtn">
+            <span>⬇️</span> Baixar Aplicativo (APK)
+        </a>
+
+        <div class="steps">
+            <h3>Instruções de Instalação:</h3>
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div>Toque no botão acima para baixar o arquivo <b>LeoMusicas.apk</b>.</div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div>Abra a notificação de download ou vá em <i>Downloads</i> no celular.</div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div>Toque em <b>Instalar</b> (ou <b>Atualizar</b> caso já tenha o app instalado).</div>
+            </div>
+        </div>
+
+        <div class="sarcasm">
+            "Instale antes que você decida ouvir música em outro reprodutor pior." 😏
+        </div>
+    </div>
+
+    <script>
+        // Automatically start download after 1 second
+        setTimeout(() => {
+            const btn = document.getElementById('downloadBtn');
+            if (btn) {
+                const a = document.createElement('a');
+                a.href = '/LeoMusicas.apk';
+                a.download = 'LeoMusicas.apk';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+        }, 800);
+    </script>
+</body>
+</html>
